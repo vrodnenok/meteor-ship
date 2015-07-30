@@ -1,0 +1,33 @@
+Picked up JAVA_TOOL_OPTIONS: -javaagent:/usr/share/java/jayatanaag.jar 
+13:50:48.650 INFO - Launching a standalone server
+Setting system property webdriver.chrome.driver to /home/vr/.nvm/versions/io.js/v2.4.0/lib/node_modules/starrynight/node_modules/chromedriver/bin/chromedriver
+13:50:48.709 INFO - Java: Oracle Corporation 24.79-b02
+13:50:48.709 INFO - OS: Linux 3.16.0-37-generic amd64
+13:50:48.729 INFO - v2.45.0, with Core v2.45.0. Built from revision 5017cb8
+13:50:48.873 INFO - Default driver org.openqa.selenium.ie.InternetExplorerDriver registration is skipped: registration capabilities Capabilities [{platform=WINDOWS, ensureCleanSession=true, browserName=internet explorer, version=}] does not match with current platform: LINUX
+13:50:48.940 INFO - RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+13:50:48.941 INFO - Version Jetty/5.1.x
+13:50:48.942 INFO - Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+13:50:48.943 INFO - Started HttpContext[/selenium-server,/selenium-server]
+13:50:48.943 INFO - Started HttpContext[/,/]
+13:50:48.978 INFO - Started org.openqa.jetty.jetty.servlet.ServletHandler@5b0508f3
+13:50:48.978 INFO - Started HttpContext[/wd,/wd]
+13:50:48.986 INFO - Started SocketListener on 0.0.0.0:4444
+13:50:48.986 INFO - Started org.openqa.jetty.jetty.Server@c0e1f6c
+13:50:49.470 INFO - Executing: [new session: Capabilities [{loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@3a7a1259, platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=App Layout}]])
+13:50:49.488 INFO - Creating a new session for Capabilities [{loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@3a7a1259, platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=App Layout}]
+Starting ChromeDriver 2.15.322448 (52179c1b310fec1797c81ea9a20326839860b7d3) on port 25452
+Only local connections are allowed.
+13:50:51.558 INFO - Done: [new session: Capabilities [{loggingPrefs=org.openqa.selenium.logging.LoggingPreferences@3a7a1259, platform=ANY, acceptSslCerts=true, javascriptEnabled=true, browserName=chrome, name=App Layout}]]
+13:50:51.589 INFO - Executing: [get: http://localhost:3000/contact])
+13:50:53.106 INFO - Done: [get: http://localhost:3000/contact]
+13:50:53.127 INFO - Executing: [set window size])
+13:50:53.355 INFO - Done: [set window size]
+13:50:53.367 INFO - Executing: [find elements: By.cssSelector: h1])
+13:50:53.495 INFO - Done: [find elements: By.cssSelector: h1]
+13:50:53.500 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on LINUX (c3c78ad29d8a7deb86087e770ba72b07)] -> css selector: h1]])
+13:50:53.527 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on LINUX (c3c78ad29d8a7deb86087e770ba72b07)] -> css selector: h1]]
+13:50:53.540 INFO - Executing: [find element: By.cssSelector: h1])
+13:50:53.573 INFO - Done: [find element: By.cssSelector: h1]
+13:50:53.583 INFO - Executing: [delete session: 38982989-17fa-4ffb-afc4-0185db10ccad])
+13:50:54.152 INFO - Done: [delete session: 38982989-17fa-4ffb-afc4-0185db10ccad]
