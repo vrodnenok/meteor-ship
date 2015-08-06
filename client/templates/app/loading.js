@@ -17,4 +17,3 @@ Template.loading.destroyed = function () {
 
 var message = '<p class="loading-message">Page is being loaded</p>';
 var spinner = '<div class="sk-spinner sk-spinner-rotating-plane"></div>';
-lkjlaksdj

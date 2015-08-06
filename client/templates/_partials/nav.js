@@ -16,9 +16,13 @@ Template.nav.events({
     currentVessel = self;
     Session.set('currentVessel', self);
     localStorage.setItem('currentVessel', JSON.stringify(self));
-    $('#selectedVesselDiv').text("Vessel selected: "+self.name);
-    $('#selectedVesselDiv').attr("href", "/"+self._id);
-    console.log($('#selectedVesselDiv').text);
+    $('#selectedVesselDiv').text(self.name);
+    if($('#selectedVesselDiv').attr('href').indexOf('vessels') === -1){
+      $('#selectedVesselDiv').attr("href", "vessels/"+self._id);
+    } else {
+      $('#selectedVesselDiv').attr("href", self._id);
+    }
+    console.log($('#selectedVesselDiv').attr('href'));
   }
 });
 
