@@ -12,7 +12,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="{{ pathFor 'homeAbout' }}">About</a></li>
             <li><a href="{{ pathFor 'homeContact' }}">Contact</a></li>
             <li><a href="{{ pathFor 'vesselsIndex' }}">Vessels</a></li>
@@ -29,28 +29,10 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              {{#if selectedVessel}}
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expandable> Seelected  </a>
-              {{else}}
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expandable> Seelect vessel. </a>
-              {{/if}}
-              <ul class="dropdown-menu" role="menu">
-                {{#each vessels}}
-                  <li>
-                    <a class = "vessel-selector" href="#"> {{name}} </a>
-                  </li>
-                {{/each}}
-              </ul>
-            </li>
             <li>
-              <a id="selectedVesselDiv" href="{{pathFor 'vesselsShow' id=selectedVessel._id}}">{{selectedVessel.name}}!</a>
-            </li>
-            <li>
-              {{#if isInRole 'admin'}}
-                <a href="#"> Admin </a>
-              {{/if}}</li>
-            {{> loginButtons}}
+              </li>
+                  <li><a id="loginLink" href="{{pathFor 'loginIndex'}}">Login</a></li>
+                  <li><a id="loginLink" href="{{pathFor 'signinIndex'}}">Sign in</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

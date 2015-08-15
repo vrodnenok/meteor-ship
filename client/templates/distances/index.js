@@ -4,6 +4,8 @@
 
 Template.distancesIndex.rendered = function(){
 
+  // Meteor.subscribe('distances');
+
   self = this;
 
   var getCountryPorts = function(countryId) {
@@ -20,6 +22,7 @@ Template.distancesIndex.rendered = function(){
     var c = {};
     c.value = i.name;
     c.id = i.id;
+    console.log(c.id);
     countriesOptions.push(c);
   });
 

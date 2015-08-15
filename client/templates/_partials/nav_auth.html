@@ -1,0 +1,62 @@
+<template name="navAuth">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{pathFor 'homeIndex'}}">Meteor-ship</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{{ pathFor 'homeAbout' }}">About</a></li>
+                    <li><a href="{{ pathFor 'homeContact' }}">Contact</a></li>
+                    <li><a href="{{ pathFor 'vesselsIndex' }}">Vessels</a></li>
+                    <li class="deopdown">
+                        <a href="dropdown-toggle" data-toggle="dropdown" role='button' aria-expansible> Tools </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{pathFor 'exchangeIndex'}}">Exchange rates</a>
+                            </li>
+                            <li>
+                                <a href="{{pathFor 'distancesIndex'}}">Distances calculator</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        {{#if selectedVessel}}
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expandable> Selecn another vessel.  </a>
+                        {{else}}
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expandable> Seelect vessel. </a>
+                        {{/if}}
+                        <ul class="dropdown-menu" role="menu">
+                            {{#each vessels}}
+                                <li>
+                                    <a class = "vessel-selector" href="#"> {{name}} </a>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{#if selectedVessel}}
+                    <li>
+                        <a id="selectedVesselDiv" href="{{pathFor 'vesselsShow' id=selectedVessel._id}}">
+                            <strong>[{{selectedVessel.name}}]</strong></a>
+                    </li>
+                        {{/if}}
+                    <li>
+                        {{#if isInRole 'admin'}}
+                            <a href="#"> Admin </a>
+                        {{/if}}
+                    </li>
+                    <li><a id="logoutLink" href="#">Logout</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+</template>
